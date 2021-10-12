@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (typeof title != 'undefined') { %>
+    <title><%= title %></title>
+    <% } else { %>
+    <title>Yelp Camp</title>
+    <% } %>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+    <!-- For Mapbox GJ JS -->
+    <link rel="stylesheet" href="/stylesheets/mapbox-gl.css">
+    <!-- Mapbox GJ JS 这个script 为library script,只能放在<head>里 -->
+    <script src="/javascripts/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="/stylesheets/app.css">
+
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <%- include('../partials/navbar.ejs')%>
+    <main class="container mt-5">
+        <%- include('../partials/flash.ejs')%>
+        <%- body  %>
+    </main>
+    <%- include('../partials/footer.ejs')%>
+
+
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+    <!-- 显示upload文件名 but ONLY WORK for Bootstrap 4  bs-custom-file-input-->
+    <!-- <script src="/javascripts/bs-custom-file-input.min.js"></script> -->
+
+    <!-- Bootstrap Validation -->
+    <script src="/javascripts/bootstrapValidation.js"></script>
+
+
+
+
+
+</body>
+
+</html>
