@@ -98,15 +98,6 @@ app.use((req, res, next) => {
 });
 
 
-//测试passport route
-// app.get('/fakeUser', async (req, res) => {
-//     const user = new User({ email: '123@123.com', username: 'vicky' })
-//     const newUser = await User.register(user, 'chicken')
-//     res.send(newUser)
-// })
-
-
-
 
 app.use('/', userRoutes)
 app.use('/campgrounds', campgroundsRoutes);
@@ -129,6 +120,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error.ejs', { err, message })
 });
 
-app.listen(3000, () => {
-    console.log('Listening on PORT 3000')
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Listening on PORT ${port}`)
 });
