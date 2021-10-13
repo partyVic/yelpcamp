@@ -17,7 +17,6 @@ const userRoutes = require('./routes/users')
 const passport = require('passport')
 const LocalStrategy = require('passport-local')
 const User = require('./models/user');
-// const { allowedNodeEnvironmentFlags } = require('process');
 const mongoSanitize = require('express-mongo-sanitize')
 const helmet = require('helmet')
 const MongoStore = require('connect-mongo')
