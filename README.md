@@ -1,2 +1,2 @@
-# yelpcamp
-YelpCamp Project 2021
+# Yelpcamp
+An ejs & Node.js Web Application
